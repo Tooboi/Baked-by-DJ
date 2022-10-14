@@ -1,0 +1,280 @@
+* {
+  --main-color-light: #f3a5c9;
+  --main-color-med: #ec6fa9;
+  --main-color-dark: #d7337f;
+  --blue-light: #38c6e3;
+  --blue-med: #1cbedf;
+  --blue-dark: #2190a6;
+  --yellow-light: #e3d839;
+  --yellow-med: #ded11d;
+  --yellow-dark: #a69d21;
+  --font: "Ubuntu", sans-serif;
+  --font-2: "Amatic SC", cursive;
+  --font-3: "Yanone Kaffeesatz", sans-serif;
+  font-family: var(--font);
+  padding: 0;
+  margin: 0;
+}
+.body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--main-color-light);
+  overflow: hidden;
+}
+.grid {
+  grid-template-columns: repeat(5, 1fr) repeat(2, 0.5fr 1fr 1fr);
+}
+.grid-flav {
+  grid-template-columns: repeat(7, 1fr);
+}
+.grid-price {
+  grid-template-columns: repeat(7, 1fr);
+}
+.grid-rent {
+  grid-template-columns: repeat(7, 1fr);
+}
+.grid-order {
+  grid-template-columns: repeat(5, 1fr);
+}
+.title-style {
+  display: grid;
+  gap: 0.24em;
+  font-size: 2em;
+  padding: 1.5em 3em;
+  justify-items: center;
+  justify-content: center;
+  color: var(--main-color-med);
+  text-shadow: -3px 3px 0px var(--main-color-dark),
+    -2px 2px 0px var(--main-color-dark), -1px 1px 0px var(--main-color-dark),
+    -4px 4px 0px var(--main-color-dark), -5px 5px 0px var(--main-color-dark),
+    -6px 6px 0px var(--main-color-dark);
+}
+.grid h1 {
+  font-family: var(--font-3);
+  font-weight: 700;
+  font-stretch: wider;
+}
+.menu-top {
+  color: var(--blue-med);
+  display: grid;
+  gap: 1em;
+  padding: 0px 20px;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  font-size: 1.5rem;
+  text-shadow: -3px 3px 0px var(--blue-med), -2px 2px 0px var(--blue-dark),
+    -1px 1px 0px var(--blue-dark);
+  width: min(100% - 15px, 900px);
+  margin-inline: auto;
+}
+.menu-top-2 {
+  color: var(--blue-med);
+  display: grid;
+  gap: 1em;
+  padding: 0px 20px;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  font-size: 1.5rem;
+  text-shadow: -3px 3px 0px var(--blue-dark), -2px 2px 0px var(--blue-dark),
+    -1px 1px 0px var(--blue-dark);
+  width: min(100% - 15px, 900px);
+  margin-inline: auto;
+}
+.menu-top a,
+.menu-top-2 a {
+  color: var(--blue-med);
+  text-decoration: none;
+}
+.menu-top a,
+.menu-top-2 a:visited {
+  color: var(--blue-med);
+  text-decoration: none;
+}
+.menu-top a,
+.menu-top-2 a:active {
+  color: var(--blue-med);
+  text-decoration: none;
+  transform: translate(-1px, 1px);
+  text-shadow: -2px 2px 0px var(--blue-dark), -1px 1px 0px var(--blue-dark);
+}
+.menu-order {
+  color: var(--blue-med);
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+  font-size: 1.6em;
+  text-shadow: -3px 3px 0px var(--blue-dark), -2px 2px 0px var(--blue-dark),
+    -1px 1px 0px var(--blue-dark), -4px 4px 0px var(--blue-dark),
+    -5px 5px 0px var(--blue-dark);
+}
+.menu-order a {
+  color: var(--blue-med);
+  text-decoration: none;
+  text-shadow: -3px 3px 0px var(--blue-dark), -2px 2px 0px var(--blue-dark),
+    -1px 1px 0px var(--blue-dark), -4px 4px 0px var(--blue-dark),
+    -5px 5px 0px var(--blue-dark);
+}
+.menu-order a:visited {
+  color: var(--blue-med);
+  text-decoration: none;
+  text-shadow: -3px 3px 0px var(--blue-dark), -2px 2px 0px var(--blue-dark),
+    -1px 1px 0px var(--blue-dark), -4px 4px 0px var(--blue-dark),
+    -5px 5px 0px var(--blue-dark);
+}
+.menu-order a:active {
+  color: var(--blue-med);
+  text-decoration: none;
+  transform: translate(-1px, 1px);
+  text-shadow: -2px 2px 0px var(--blue-dark), -1px 1px 0px var(--blue-dark),
+    -3px 3px 0px var(--blue-dark), -4px 4px 0px var(--blue-dark);
+}
+.flavor-container {
+  display: grid;
+  width: min(100% - 15px, 900px);
+  margin-inline: auto;
+  grid-template-areas:
+    "A B"
+    "C C";
+  justify-content: space-around;
+  justify-items: center;
+  color: var(--main-color-dark);
+}
+@media only screen and (max-width: 570px) {
+  .flavor-container {
+    display: grid;
+    grid-template-areas:
+      "A"
+      "B"
+      "C";
+    justify-content: space-around;
+    color: var(--main-color-dark);
+  }
+  .flavors-footer {
+    font-size: 90%;
+  }
+}
+.cupcakes {
+  display: grid;
+  grid-area: A;
+  gap: 0.5em;
+  grid-template-rows: 3em auto 3em auto;
+  justify-items: left;
+  align-items: center;
+  padding: 2em;
+}
+.two-point-shadow-pink {
+  text-shadow: -1px 1px 0px var(--main-color-dark),
+    -2px 2px 0px var(--main-color-dark);
+  color: var(--main-color-med);
+}
+.two-point-shadow-blue {
+  text-shadow: -1px 1px 0px var(--blue-dark), -2px 2px 0px var(--blue-dark),
+    -3px 3px 0px var(--blue-dark);
+  color: var(--blue-med);
+}
+.two-point-shadow-yellow {
+  text-shadow: -1px 1px 0px var(--yellow-dark), -2px 2px 0px var(--yellow-dark);
+  color: var(--yellow-med);
+}
+.cakes {
+  display: grid;
+  grid-area: B;
+  gap: 0.5em;
+  grid-template-rows: 3em auto 3em auto 5em auto;
+  justify-items: left;
+  align-items: center;
+  padding: 2em;
+}
+.flavors-footer {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  grid-area: C;
+  padding: 0 0 2em 0;
+  justify-content: center;
+  align-items: center;
+}
+.pricing-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: min(100% - 15px, 900px);
+  margin-inline: auto;
+}
+@media only screen and (max-width: 775px) {
+  .pricing-container {
+    grid-template-columns: 1fr;
+  }
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+}
+.pricing-cakes {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 1em;
+}
+.pricing-cupcakes {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 1em;
+}
+.pricing-treats {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 1em;
+}
+.pricing-item {
+  display: grid;
+  grid-template-areas:
+    "size serve"
+    "size price";
+  padding: 0.5em;
+  color: var(--main-color-light);
+  background-color: var(--main-color-dark);
+  border-radius: 6px;
+  margin: 0 auto;
+}
+.pricing-item-2 {
+  display: grid;
+  grid-template-areas: "serve";
+  padding: 1em;
+  color: var(--main-color-light);
+  background-color: var(--main-color-dark);
+  border-radius: 6px;
+  margin: 0 auto;
+}
+.pricing-item-3 {
+  display: grid;
+  grid-template-areas:
+    "serve"
+    "price";
+  padding: 1em;
+  color: var(--main-color-light);
+  background-color: var(--main-color-dark);
+  border-radius: 6px;
+  margin: 0 auto;
+}
+.p-size {
+  display: grid;
+  grid-area: size;
+  font-size: clamp(1.2em, 10vw, 1.5em);
+  padding: 0.5em;
+  align-items: center;
+  justify-items: center;
+}
+.p-serve {
+  display: grid;
+  grid-area: serve;
+  align-items: center;
+}
+.p-price {
+  display: grid;
+  grid-area: price;
+  align-items: center;
+}
