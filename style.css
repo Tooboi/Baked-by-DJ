@@ -54,6 +54,9 @@
   font-weight: 700;
   font-stretch: wider;
 }
+.pad-1em {
+  padding: .8em;
+}
 .menu-top {
   color: var(--blue-med);
   display: grid;
@@ -277,4 +280,22 @@
   display: grid;
   grid-area: price;
   align-items: center;
+}
+.rental-area {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
+  color: var(--main-color-dark);
+}
+.rental-area a {
+  text-decoration: none;
+}
+.rental-price {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 1em;
 }
