@@ -19,6 +19,8 @@ N/A
 Josh Pica
 ## Version History
 
+* 0.3
+    * Rentals page complete
 * 0.2
     * Bulk of pages complete
     * Rentals and Order links TBD
